@@ -1,0 +1,67 @@
+\documentclass[14pt,t]{beamer}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+\DeclareUnicodeCharacter{00A0}{ }
+
+\usepackage{caption}
+\captionsetup{figurename=} % remore "Figure" before captions
+
+\usepackage[numbers,sort&compress]{natbib}
+\renewcommand{\bibsection}{\subsubsection*{\bibname } } % Remove bibtex from toc
+\DeclareUnicodeCharacter{00A0}{ } % remove the bib encoding problem
+\setbeamertemplate{bibliography item}{} %remove the reference
+
+\usepackage{multimedia} % To include video
+
+\usetheme{Warsaw} % With horizontal table of content on top
+
+\setbeamertemplate{navigation symbols}
+{%
+\vbox{%
+\hbox{\insertslidenavigationsymbol}
+\hbox{\insertframenavigationsymbol}
+\hbox{\insertsubsectionnavigationsymbol}
+\hbox{\insertsectionnavigationsymbol}
+\hbox{\insertdocnavigationsymbol}
+\hbox{\insertbackfindforwardnavigationsymbol}}%
+}% to set the navigation bar
+
+% To add page number
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+% allowframebreaks not numbered
+\setbeamertemplate{frametitle continuation}[from second]
+
+\title[Self-Supervised Terrain Classification]{Self-Supervised Terrain Classification for Planetary Surface Exploration Rovers}
+\subtitle{Christopher A. Brooks and Karl Iagnemma (2012)}
+\author{Sébastien Michaud}
+\institute{Université Laval}
+\date{10 avril 2014}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame} 
+    
+\input{./text/Problematique}
+\input{./text/SolutionConcepts}            
+\input{./text/Proprioceptif}
+\input{./text/Exteroceptif}
+\input{./text/Resultats}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Références}
+    \small
+    \nocite{*}
+    \bibliographystyle{plainnat}
+    \bibliography{./text/Bibliography}
+\end{frame}
+
+\end{document}

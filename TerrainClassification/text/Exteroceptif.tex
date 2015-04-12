@@ -1,0 +1,51 @@
+\section{Classement extéroceptif}
+    
+\subsection{Classement extéroceptif}
+    \begin{frame}
+        \frametitle{Classement extéroceptif}
+        \begin{itemize}
+        \item Capteur utilisé : appareil stéréoscopique
+            \item Données utilisées :            
+            \begin{itemize}
+                \item couleur en \emph{teinte saturation valeur} (HSV) ;
+                \item texture visuelle (mesure des variations d'intensité locale) ;
+                \item géométrie du terrain.
+            \end{itemize}
+            \item Trois classificateurs SVM distincts.
+            \item Fusion par classificateur bayésien naif.
+            \item Discrétisation en cellules (20 cm x 20 cm).
+        \end{itemize}
+    \end{frame}
+    
+\subsection{Validation expérimentale}
+    \begin{frame}
+        \frametitle{Validation expérimentale}
+        \begin{itemize}
+            \item Six ensembles de données (trajets parcourus).                        
+            \item Trajets d'au moins 10 mètres.
+            \item Deux ou trois types de surface.
+            \item Tous les chemins étaient distincts.
+            \item Récolté au cours de 3 jours.
+            \item Grande variété de luminosité.
+        \end{itemize}
+    \end{frame}
+    
+\subsection{Résultats de validation}
+    \begin{frame}
+        \frametitle{Résultats de validation}
+        Évaluation du rapport entre les VP et les FP.
+        \begin{center}              
+            \begin{tabular}{|lcc|}
+                \hline
+                Classe & VP (\%) &  FP (\%)\\
+                \hline
+                Roche & > 96 & < 3 \\
+                Herbes & $\approx 50$ & < 0,1 \\
+                Sable & > 95 & 0\\
+                \hline           
+            \end{tabular}                  
+        \end{center}
+        Au total 95,1\% des terrains étaient bien identifiés. 
+    \end{frame}
+
+            
